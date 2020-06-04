@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>LEO shop</title>
+        <link rel="stylesheet" href="css/normalize.css"/>
+        <link rel="stylesheet" href="css/style.css"/>
+    </head>
+    
+    <body>
+        <header class="header">
+    <div class="bar-wrapper">
+        <div class="container">
+            <div class="top-bar">
+
+                <div class="select-options">
+                    <div class="lang-select js-lang-select">
+                        <span>Language:</span>
+                        <button class="lang-select__btn js-lang-select-btn" aria-label="Current language">English</button>
+                        <ul class="languages-list js-languages-list">
+                            <li class="languages-list__item active">English</li>
+                            
+                            <li class="languages-list__item">French</li>
+                            
+                            <li class="languages-list__item">German</li>
+                        </ul>
+                    </div>
+        
+                    <div class="currency-select js-currency-select">
+                        <span>Currency:</span>
+                        <button class="currency-select__btn js-currency-select-btn" aria-label="Current currency">USD</button>
+                        <ul class="currency-list js-currency-list">
+                            <li class="currency-list__item active">USD</li>
+                            
+                            <li class="currency-list__item">EUR</li>
+                            
+                            <li class="currency-list__item">GBP</li>
+                        </ul>
+                    </div>
+                </div>
+    
+                <nav class="nav-info">
+                    <ul class="nav-info__list">
+                        <li class="nav-info__item">
+                            <a href="#" class="nav-info__link">Account</a>
+                        </li>
+    
+                        <li class="nav-info__item">
+                            <a href="#" class="nav-info__link">Wishlist</a>
+                        </li>
+    
+                        <li class="nav-info__item">
+                            <a href="#" class="nav-info__link">Checkout</a>
+                        </li>
+    
+                        <li class="nav-info__item">
+                            <a href="#" class="nav-info__link">Log In</a>
+                        </li>
+    
+                        <li class="nav-info__item">
+                            <a href="#" class="nav-info__link">Sign Up</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>  
+
+    <div class="container">
+        <div class="main-bar">
+            <h1 class="main-bar__logo">Leo Shop</h1>
+
+            <menu class="main-bar__menu">
+                <nav class="nav-menu">
+                    <ul class="nav-menu__list">
+                        <li class="nav-menu__item">
+                            <a href="/" class="nav-menu__link">Home</a>
+                        </li>
+
+                        <li class="nav-menu__item">
+                            <a href="#" class="nav-menu__link">Women</a>
+                        </li>
+
+                        <li class="nav-menu__item">
+                            <a href="#" class="nav-menu__link">Men</a>
+                        </li>
+
+                        <li class="nav-menu__item">
+                            <a href="#" class="nav-menu__link">Other</a>
+                        </li>
+
+                        <li class="nav-menu__item">
+                            <a href="#" class="nav-menu__link">Purchase</a>
+                        </li>
+                    </ul>
+                </nav>
+            </menu>
+
+            <form action="#" class="form-main">
+                <input class="form-main__input" type="search" placeholder="search...">
+                <button title="Find" type="button" aria-label="Find" class="form-main__btn"></button>
+            </form>
+
+            <div class="tags-purchase-container">
+                <button title="search" aria-label="search" id="search" class="search-mob"></button>
+
+                <button title="Tags" aria-label="Tags" id="tags" class="tags"></button>
+
+                <button title="Purchase" aria-label="Purchase" id="purchase" class="purchase"></button>
+            </div>
+            
+            <button class="purchase-count">
+                <span class="purchase-count__cart">Cart</span>
+
+                <a href="#" id="count-goods" class="purchase-count__count" data-value="0">0</a>
+            </button>
+        </div>
+
+        <div class="menu-mob">Menu
+            <button id="hamburger-btn"></button>
+        </div>
+    </div>
+</header>
+        <main class="main-container">
+            
+        </main>
+        <footer class="footer">
+    <div class="container">
+        <div class="footer-topbar">
+            <div class="footer-shipping">
+                <button class="footer-shipping__btn"></button>
+                <h3 class="footer-shipping__title">Free shipping on orders over $100</h3>
+            </div>
+
+            <div class="footer-call">
+                <button class="footer-call__btn"></button>
+                <h3 class="footer-call__title">Call us! toll free - 409-8888-0099</h3>
+            </div>
+        </div>
+    </div> 
+    
+    <div class="footer-mainbar">
+        <div class="container flex-footer">
+            <section class="facebook-block">
+                <h3 class="facebook-block__title footer-title">Facebook</h3>
+                <p class="facebook-block__desc">20000 Members</p>
+                <button class="facebook-block__icon"></button>
+                <div class="facebook-collage">
+                    <img src="./img/footer/collage/face1.jpeg" alt="face-1">
+                    <img src="./img/footer/collage/face2.jpeg" alt="face-2">
+                    <img src="./img/footer/collage/face3.jpeg" alt="face-3">
+                    <img src="./img/footer/collage/face4.jpeg" alt="face-4">
+                    <img src="./img/footer/collage/face5.jpeg" alt="face-5">
+                    <img src="./img/footer/collage/face6.jpeg" alt="face-6">
+                    <img src="./img/footer/collage/face7.jpeg" alt="face-7">
+                    <img src="./img/footer/collage/face8.jpeg" alt="face-8">
+                </div>
+
+                <a href="#" class="facebook-block__desc">Facebook Social plugin</a>
+            </section>
+            
+            <section class="twitter-block">
+                <h3 class="twitter-block__title footer-title">From twitter</h3>
+
+                <a href="#" class="twitter-block__desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the</a>
+
+                <a href="#" class="twitter-block__desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the</a>
+            </section>
+
+            <section class="info-block">
+                <h3 class="info-block__title footer-title">From twitter</h3>
+
+                <ul class="info-nav">
+                    <li class="info-nav__item">
+                        <a class="info-nav__link" href="#">Sed ultrices purus non.</a>
+                    </li>
+                    
+                    <li class="info-nav__item">
+                        <a class="info-nav__link" href="#">Sodales sodales.</a>
+                    </li>
+                    
+                    <li class="info-nav__item">
+                        <a class="info-nav__link" href="#">Curabitur pretium dui vitae.</a>
+                    </li>
+
+                    <li class="info-nav__item">
+                        <a class="info-nav__link" href="#">Donec gravida mi in nisl</a>
+                    </li>
+
+                    <li class="info-nav__item">
+                        <a class="info-nav__link" href="#">Faucibus leo condimentum.</a>
+                    </li>
+
+                    <li class="info-nav__item">
+                        <a class="info-nav__link" href="#">Donec et lorem suscipit.</a>
+                    </li>
+                </ul>
+            </section>
+
+            <section class="contacts-block">
+                <h3 class="contacts-block__title footer-title">Contact Us</h3>
+
+                <ul class="contacts-nav">
+                    <li class="contacts-nav__item">
+                        <a class="contacts-nav__link" href="#">Leo Store</a>
+                    </li>
+
+                    <li class="contacts-nav__item">
+                        <a class="contacts-nav__link" href="#">Leopards media</a>
+                    </li>
+
+                    <li class="contacts-nav__item">
+                        <a class="contacts-nav__link" href="#">KVM Rpad, 4590GH</a>
+                    </li>
+
+                    <li class="contacts-nav__item">
+                        <a class="contacts-nav__link" href="tel: +1 489-8888-0099">+1 489-8888-0099</a>
+                    </li>
+                    
+                    <li class="contacts-nav__item">
+                        <a class="contacts-nav__link" href="mailto:mail@email.com">mail@email.com</a>
+                    </li>
+                </ul>
+
+                <div class="socials-btn">
+                    <ul class="socials-btn__list">
+                        <li class="socials-btn__item">
+                            <a class="socials-btn__google socials-links" href="#"></a>
+                        </li>
+
+                        <li class="socials-btn__item">
+                            <a class="socials-btn__linkedin socials-links" href="#"></a>
+                        </li>
+
+                        <li class="socials-btn__item">
+                            <a class="socials-btn__twitter socials-links" href="#"></a>
+                        </li>
+
+                        <li class="socials-btn__item">
+                            <a class="socials-btn__fb socials-links" href="#"></a>
+                        </li>
+                    </ul>   
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <div class="bar-bottom">
+        <div class="container flex">
+            <a href="#" class="bar-bottom__desc">© 2014 Leoshop. All rights reserved</a>
+            <nav class="nav-footer">
+                <ul class="nav-footer__list">
+                    <li class="nav-footer__item">
+                        <a href="#" class="nav-footer__link">About Us</a>
+                    </li>
+
+                    <li class="nav-footer__item">
+                        <a href="#" class="nav-footer__link">Delivery & Returns</a>
+                    </li>
+
+                    <li class="nav-footer__item">
+                        <a href="#" class="nav-footer__link">Terms & Conditions</a>
+                    </li>
+
+                    <li class="nav-footer__item">
+                        <a href="#" class="nav-footer__link">Contact Us</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</footer>
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+        <script type="text/javascript" src="./js/script.js"></script>
+    </body>
+</html>

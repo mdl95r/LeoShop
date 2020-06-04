@@ -1,0 +1,136 @@
+.side-bar {
+    padding-left: 20px;
+    max-width: 240px;
+}
+
+.sidebar-banner {
+    position: relative;
+    margin-bottom: 30px;
+
+    &__list {
+        margin-bottom: 20px;
+    }
+
+    // .banner-bar__item
+
+    &__item {
+        display: none;
+        opacity: 0.3;
+        &.active {
+            display: block;
+            opacity: 1;
+        }
+    }
+
+    &__btn {
+        position: absolute;
+        bottom: 13%;
+        left: calc(38% - 33px);
+        padding: 15px 20px;
+        background: $blue-color4;
+        color: #fff;
+
+        &:hover {
+            background: #31869b;
+            transition: all .2s ease;
+            -webkit-transition: all .2s ease;
+            -moz-transition: all .2s ease;
+            -ms-transition: all .2s ease;
+            -o-transition: all .2s ease;
+        }
+    }
+}
+
+.banner-swipe {
+    padding: 20px 15px 15px;
+    // .banner-swiper__list
+
+    &__list {
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    // .banner-swiper__item
+
+    &__item {
+        position: relative;
+        display: block;
+        height: 13px;
+        width: 13px;
+        background: $green;
+        border-radius: 100%;
+        
+        &.active {
+            background: $blue-color4;
+        }
+
+        &:hover {
+            background: #648e19;
+        }
+        transition: all .2s ease-in;
+        -webkit-transition: all .2s ease-in;
+        -moz-transition: all .2s ease-in;
+        -ms-transition: all .2s ease-in;
+        -o-transition: all .2s ease-in;
+}
+
+    &__btn {
+        height: 21px;
+        width: 21px;    
+        position: absolute;
+        left: -4px;
+        bottom: -4px;
+    }
+}
+
+.aside-items {
+    border-radius: 5px;
+    border-top: 4px solid #38a0b9;
+    -webkit-box-shadow: 0 0 5px #aaa;
+    box-shadow: 0 0 5px #aaa;
+    padding: 20px 15px 15px;
+    text-align: center;
+}
+
+.subscribe-wrapper {
+    .subscribe-subtitle {
+        position: relative;
+        margin-bottom: 20px;
+        &:after {
+            content: '';
+            position: absolute;
+            bottom: -23%;
+            left: 25%;
+            height: 1px;
+            width: 50%;
+            background: #EDEDED;
+        }
+    }
+}
+
+.form-subscribe {
+
+    // .form-signUp__input
+
+    &__input {
+        margin-bottom: 15px;
+        padding: 5px 13px;
+        text-align: center;
+    }
+
+    &__btn {
+        padding: 10px 15px;
+        background: $green;
+        color: #fff;
+        padding: 15px 25px;
+
+        &:hover {
+            background: #6a9223;
+            transition: .2s;
+            -webkit-transition: .2s;
+            -moz-transition: .2s;
+            -ms-transition: .2s;
+            -o-transition: .2s;
+        }
+    }
+}

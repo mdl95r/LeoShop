@@ -1,0 +1,131 @@
+.banner-wrapper {
+    position: relative;
+    padding-bottom: 16%;
+    margin-bottom: 30px;
+}
+
+.banner-item {
+    position: relative;
+    display: none;
+    opacity: 0.4;
+    //.banner-item__img:;
+   &__img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+    }
+}
+
+.banner-item.active {
+    display: block;
+    opacity: 1;
+}
+
+.banner-content {
+    padding: 12% 24% 0 18%;
+    color: #fff;
+    text-transform: uppercase;
+        &__title {
+            display: inline-block;
+            padding: 5px 20px;
+            font-size: 2em;
+            background: rgba(91, 89, 82, 0.4);
+        }
+        
+        // .banner-item__desc
+        
+        &__desc {
+            display: inline-block;
+            padding: 5px 20px;
+            font-size: 2em;
+            background: rgba(91, 89, 82, 0.4);
+        }
+
+        &__wrapper {
+            margin-bottom: 10px;
+        }
+
+        &__wrapper:last-child {
+            margin-bottom: 0;
+        }
+}
+
+.control-btn-prev {
+    width: 80px;
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    z-index: 1;
+    transform: translateY(-50%);
+    &:after {
+        content: "";
+        width: 70px;
+        height: 70px;
+        border-radius: 100%;
+        -webkit-border-radius: 100%;
+        -moz-border-radius: 100%;
+        -ms-border-radius: 100%;
+        -o-border-radius: 100%;
+        position: absolute;
+        top: 40%;
+        left: 6px;
+        background: url(../img/iconfinder_nav-arrow.png) #7d7d7d no-repeat;
+        background-position: 44% 47%;
+        background-size: 30px;
+    }
+
+    &:hover:after {
+        background: url(../img/iconfinder_nav-arrow.png) #a7a7a7 no-repeat;
+        background-position: 44% 47%;
+        background-size: 30px;
+        transition: all .3s ease;
+        -webkit-transition: all .3s ease;
+        -moz-transition: all .3s ease;
+        -ms-transition: all .3s ease;
+        -o-transition: all .3s ease;
+    }
+}
+
+.control-btn-next {
+    width: 80px;
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    right: 5%;
+    z-index: 1;
+    transform: translateY(-50%);
+    &:before {
+        content: "";
+        width: 70px;
+        height: 70px;
+        border-radius: 100%;
+        -webkit-border-radius: 100%;
+        -moz-border-radius: 100%;
+        -ms-border-radius: 100%;
+        -o-border-radius: 100%;
+        position: absolute;
+        top: 40%;
+        right: 6px;
+        background: url(../img/iconfinder_nav-arrow.png) #7d7d7d no-repeat;
+        background-position: 44% 47%;
+        background-size: 30px;
+        transform: rotate(180deg);
+        -webkit-transform: rotate(180deg);
+        -moz-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+        -o-transform: rotate(180deg);
+    }
+
+    &:hover:before {
+        background: url(../img/iconfinder_nav-arrow.png) #a7a7a7 no-repeat;
+        background-position: 44% 47%;
+        background-size: 30px;
+        transition: all .3s ease;
+        -webkit-transition: all .3s ease;
+        -moz-transition: all .3s ease;
+        -ms-transition: all .3s ease;
+        -o-transition: all .3s ease;
+    }
+}
