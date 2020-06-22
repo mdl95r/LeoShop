@@ -1,0 +1,8 @@
+.categories-list {
+    &__link {
+        &:hover {
+            color: $blue-color4;
+            @include trans-2s_ease(.3s);
+        }
+    }
+}

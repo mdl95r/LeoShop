@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>LEO shop</title>
+        <link rel="stylesheet" href="css/normalize.css"/>
+        <link rel="stylesheet" href="css/style.css"/>
+    </head>
+    
+    <body>
+        @@include("html-components/_header.html")
+        <main class="main-container">
+            <div class="container flex">
+                <div class="products-container">
+                    <section class="products-block section">
+                        <h2 class="products-block__title h2-title">Others</h2>
+                        @@include("html-components/_sort-bar.html")
+                        
+                        <ul class="products-block__list list-items"></ul>
+                    </section>
+                </div>
+            
+                @@include("html-components/filters-sidebar/_filters-sidebar-main.html")
+            </div>
+        </main>
+        @@include("html-components/_footer.html")
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-polyfill/6.26.0/polyfill.min.js" nomodule></script>
+        <script type="text/javascript" src="./js/script.js"></script>
+        <script type="text/javascript" src="./js/other.js"></script>
+    </body>
+</html>
+
+

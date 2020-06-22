@@ -183,7 +183,7 @@ document.addEventListener("DOMContentLoaded", function() {
     
                     <h3 class="card-item__title" title="Product Name">${category.title}</h3>
                     
-                    <strike class="card-item__price-old" title="Old price" aria-label="Old price">${category.old_price}</strike>
+                    <s class="card-item__price-old" title="Old price" aria-label="Old price">${category.old_price}</s>
     
                     <span class="card-item__price" title="Price" aria-label="Price">${category.price}</span>
     
@@ -204,12 +204,8 @@ document.addEventListener("DOMContentLoaded", function() {
     document.querySelector('.favorites-block__list').innerHTML = favoritesCards_html
     document.querySelector('.products-block__list').innerHTML = html
 
-    const newProduct_NEW = $('.new-product');
-    const productSale = $('.product-sale');
-    
-
-    newProduct_NEW.text('NEW!');
-    productSale.text('SALE!');
+    $('.new-product').text('NEW!');
+    $('.product-sale').text('SALE!');
 })
 
 

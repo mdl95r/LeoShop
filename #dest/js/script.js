@@ -1,18 +1,28 @@
 $(document).ready(function() {    
-    let counter = 0;
+    // Обрабатываем нажатие для добавления товара в корзину и обновление счетчика товара
+function addCounter() {
+    let counter = 0;   
+    return function() {
+        return ++counter;
+    };
+}
 
-// Обрабатываем нажатие для добавления товара в корзину и обновление счетчика товара
-$('.list-items').on('click', '.card-item__purchase', function() {
-    counter += 1;
-    $('#count-goods').text(counter);
-    $('#count-goods').attr('data-value', counter);
+currentCount = addCounter();
+
+$('.list-items').on('click', '.card-item__purchase', function() { 
+    count = currentCount();
+    $('#count-goods').text(count);
+    $('#count-goods').attr('data-value', count);
 });
+
     const btn_next = $('.js-btn-next');
 const btn_prev = $('.js-btn-prev');
 
 // главный слайдер
+
 // предыдущий слайд
-$(btn_prev).on('click', function(){
+
+function prevSlide() {
     const current = $('.banner-item.active');
     const last = $('.banner-item').last();
     
@@ -20,20 +30,54 @@ $(btn_prev).on('click', function(){
     last.remove();
     current.animate({opacity: 0.3}, 1000).removeClass('active');
     current.prev().animate({opacity: 1}, 1000).addClass('active');
+}
+
+$(btn_prev).on('click', function(){
+    prevSlide();
 });
 
-// следующий слайд
-$(btn_next).on('click', function(){
+// Управление клавиатурой
+$(btn_prev).on('focus', function() {
+    $(window).on('keydown', function(event) {
+        if (event.keyCode == 37) {
+            prevSlide();
+        }
+    });
+});
+
+$(btn_prev).on('blur', function() {
+    $(window).off('keydown');
+})
+
+function nextSlide() {
     const current = $('.banner-item.active');
     
     $(current).next().animate({opacity: 1}, 1000).addClass('active');
     $(current).remove();
     $(current).clone().appendTo('.banner-list').animate(
         {opacity: 0.3}, 1000).removeClass('active').next();
+}
+// следующий слайд
+$(btn_next).on('click', function(){
+    nextSlide();
 });
 
+// Управление клавиатурой
+$(btn_next).on('focus', function() {
+    $(window).on('keydown', function(event) {
+        if (event.keyCode == 39) {
+            nextSlide();
+        }
+    });
+});
+
+$(btn_next).on('blur', function() {
+    $(window).off('keydown');
+})
+
+
 // слайдер в сайдбаре
-$('ol li').on('click', function(){
+$('.banner-swipe__item').on('click', function(){
     const item_active = $('.banner-swipe__item.active');
     const SideBarBanner = $('.sidebar-banner__item.active');
     const index = $(this).index() + 1;
@@ -46,6 +90,35 @@ $('ol li').on('click', function(){
 
     $("#slide_" + index).animate({opacity: 1}, 800).addClass("active");
 });
+
+// слайдер в single.html
+$('.card-slider-list__item').on('click', function(){
+    const cardSlider = $('.current-image__img.active');
+    const index = $(this).index() + 1;
+
+    $(cardSlider).animate({opacity: 0.3}, 800).removeClass('active');
+    $("#card-slide_" + index).animate({opacity: 1}, 800).addClass("active");
+});
+
+// слайдер с 10 подобными продуктами
+
+$('.same-products-slider__btn-prev').on('click', function() {
+    const listItems = $('.same-products__list');
+    const item = $('.same-products__item');
+    const lastItem = item.last();
+
+    $(lastItem).clone().prependTo(listItems);
+    $(lastItem).remove();
+});
+
+$('.same-products-slider__btn-next').on('click', function() {
+    const listItems = $('.same-products__list');
+    const item = $('.same-products__item');
+    const firstItem = item.first();
+
+    $(firstItem).clone().appendTo(listItems);
+    $(firstItem).remove();
+})
     const currencySelect = $('.js-currency-select');
 const currencySelectBtn = $('.js-currency-select-btn');
 const currency_list = $('.js-currency-list');
@@ -122,5 +195,13 @@ $(window).on('resize', function() {
     
         delete w;
       }
+});
+    $('.brand-list').hide();
+$('.shape-list').hide();
+$('.size-list').hide();
+
+$('.filter-title').on('click', function(){
+    $(this).next().toggleClass('active');
+    $(this).siblings('.filter-list').slideToggle();
 });
 });

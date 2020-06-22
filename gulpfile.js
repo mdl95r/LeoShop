@@ -17,13 +17,13 @@ const path = {
     pug: source_folder+"/index.pug",
     css: source_folder+"/scss/style.scss",
     js: source_folder+"/js/**/*.js",
-    img: source_folder + "/img/**/*.{jpg, png, svg, webp}",
+    img: source_folder + "/img/**/*.{jpg, jpeg, png, svg, webp}",
     fonts: source_folder+"fonts/",
   },
 
   watch: {
     html: source_folder + "/**/*.html",
-    pug: source_folder+"/index.pug",
+    // pug: source_folder+"/index.pug",
     css: source_folder + "/scss/**/*.scss",
     js: source_folder + "/js/**/*.js",
     img: source_folder+"/img",
@@ -58,15 +58,15 @@ function browserSync() {
 function html() {
   return src(path.src.html)
     .pipe(fileinclude())
-    // .pipe(webphtml())
-    // .pipe(
-    //   lazyScr({
-    //     decodeEntities: false,
-    //     data_src: 'data-src',
-    //     data_srcset: 'data-srcset',
-    //     suffix: {'320w': '@320w', '640w': '@640w', '960w': '@960w'}
-    //   })
-    // )
+    .pipe(webphtml())
+    .pipe(
+      lazyScr({
+        decodeEntities: false,
+        data_src: 'data-src',
+        data_srcset: 'data-srcset',
+        suffix: {'320w': '@320w', '640w': '@640w', '960w': '@960w'}
+      })
+    )
     .pipe(dest(path.build.html))
     .pipe(browsersync.stream())
 }
@@ -80,11 +80,11 @@ function js() {
 
 function images() {
   return src(path.src.img)
-    // .pipe(
-    //   webp({
-    //       quality: 70
-    //   })
-    // )
+    .pipe(
+      webp({
+          quality: 70
+      })
+    )
     .pipe(dest(path.build.img))
     .pipe(src(path.src.img))
     .pipe(

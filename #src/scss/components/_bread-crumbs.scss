@@ -1,0 +1,49 @@
+.breadcrumbs-wrapper {
+    padding: 7px 15px;
+    background: $light-grey;
+    border: 1px solid #e6e6e6;
+    margin-bottom: 20px;
+    // .breadcrumbs-wrapper__list
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    // .breadcrumbs-wrapper__item
+
+    &__item {
+        margin-right: 15px;
+        position: relative;
+        &:after {
+            content: '/';
+            position: absolute;
+            top: 2px;
+            color: $grey;
+            margin-left: 5px;
+        }
+
+        &:last-child {
+            margin-right: 0;
+            &:after {
+                content: '';
+            } 
+        }
+    }
+
+    // .breadcrumbs-wrapper__link
+
+    &__link {
+        font-size: 13px;
+        color: $blue-color4;
+        
+        &:hover {
+            color: $grey;
+            @include trans-2s_ease(.3s);
+        }
+
+        &.active {
+            color: $grey;
+        }
+    }
+}

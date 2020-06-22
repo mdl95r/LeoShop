@@ -1,0 +1,28 @@
+@import "../variables.scss";
+
+.sort-bar {
+    padding: 7px 15px;
+    background: #f7f7f7;
+    border: 1px solid #e6e6e6;
+    margin-bottom: 20px;
+    font-size: 14px;
+    @include flx-sbn;
+    flex-wrap: wrap;
+    align-items: center;
+    &__label {
+        font-weight: normal;
+    }
+
+    .pages-select {
+        @include flx-sbn;
+        &__title {
+            margin-right: 10px;
+        }
+        
+        &__item {
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}

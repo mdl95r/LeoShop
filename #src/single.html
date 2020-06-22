@@ -9,12 +9,31 @@
     </head>
     
     <body>
-        @@include("_header.html")
+        @@include("html-components/_header.html")
         <main class="main-container">
-            
+            <div class="container">
+                @@include("html-components/_bread-crumbs.html")
+            </div>
+             <div class="container flex">
+                 <div class="content-container">
+                    <section class="main-description">
+                            @@include("html-components/single-page/_card-description-main.html")
+                    </section>
+                    
+                    <section class="same-products">
+                        @@include("html-components/single-page/_same-10-products.html")
+                    </section>
+
+                    <div class="other-description">
+                        @@include("html-components/single-page/_other-description.html")
+                    </div>
+                </div>
+                @@include("html-components/filters-sidebar/_filters-sidebar-main.html")
+             </div>
         </main>
-        @@include("_footer.html")
+        @@include("html-components/_footer.html")
         <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-polyfill/6.26.0/polyfill.min.js" nomodule></script>
         <script type="text/javascript" src="./js/script.js"></script>
     </body>
 </html>
