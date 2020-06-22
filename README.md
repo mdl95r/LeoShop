@@ -1,5 +1,5 @@
 # LeoShop
- https://mdl95-showcase.tk/LeoShop/index.html
+ https://mdl95-showcase.tk/LeoShop/main.html
 
 ##  Разработка/developing
 
