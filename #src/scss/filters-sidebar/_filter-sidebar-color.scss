@@ -3,7 +3,7 @@
         .color-item {
             display: flex;
             align-items: center;
-            &__input {
+            &__btn {
                 width: 25px;
                 height: 25px;
                 border: none;
@@ -19,43 +19,43 @@
             }
 
             &:nth-child(1) {
-                .color-item__input {
+                .color-item__btn {
                     background: red;
                 }
             }
 
             &:nth-child(2) {
-                .color-item__input {
+                .color-item__btn {
                     background: green;
                 }
             }
             
             &:nth-child(3) {
-                .color-item__input {
+                .color-item__btn {
                     background: blue;
                 }
             }
 
             &:nth-child(4) {
-                .color-item__input {
+                .color-item__btn {
                     background: yellow;
                 }
             }
 
             &:nth-child(5) {
-                .color-item__input {
+                .color-item__btn {
                     background: violet;
                 }
             }
 
             &:nth-child(6) {
-                .color-item__input {
+                .color-item__btn {
                     background: orange;
                 }
             }
 
             &:nth-child(7) {
-                .color-item__input {
+                .color-item__btn {
                     background: gray;
                 }
             }

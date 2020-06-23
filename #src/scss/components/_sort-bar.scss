@@ -15,6 +15,10 @@
 
     .pages-select {
         @include flx-sbn;
+        &-list {
+            display: flex;
+        }
+
         &__title {
             margin-right: 10px;
         }

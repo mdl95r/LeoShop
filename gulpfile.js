@@ -1,7 +1,6 @@
-// 'use strict';
-
 const project_folder = "#dest";
 const source_folder = "#src";
+const components = "components";
 
 const path = {
   build: {
@@ -13,10 +12,10 @@ const path = {
   },
 
   src: {
-    html: [source_folder+"/*.html", "!"+source_folder+"/_*.html"],
+    html: [source_folder+"/*.html", "!"+source_folder +  "/_*.html"],
     pug: source_folder+"/index.pug",
     css: source_folder+"/scss/style.scss",
-    js: source_folder+"/js/**/*.js",
+    js: [source_folder+"/js/*.js", "!" + source_folder + "/" + components + "/_*.js"],
     img: source_folder + "/img/**/*.{jpg, jpeg, png, svg, webp}",
     fonts: source_folder+"fonts/",
   },

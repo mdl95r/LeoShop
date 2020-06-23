@@ -1,6 +1,8 @@
 document.addEventListener("DOMContentLoaded", function() {
+    const pathSingle = 'single.html'
     const cards = [
         {   
+            link: pathSingle,
             Sale: '',
             newProduct: 'new-product',
             img_src: './img/cards/pic1.jpg',
@@ -12,6 +14,7 @@ document.addEventListener("DOMContentLoaded", function() {
         },
     
         {   
+            link: pathSingle,
             Sale: '',
             newProduct: '',
             img_src: './img/cards/pic2.jpg',
@@ -23,6 +26,7 @@ document.addEventListener("DOMContentLoaded", function() {
         },
     
         {   
+            link: pathSingle,
             Sale: 'product-sale',
             newProduct: '',
             img_src: './img/cards/pic3.jpg',
@@ -34,6 +38,7 @@ document.addEventListener("DOMContentLoaded", function() {
         },
     
         {   
+            link: pathSingle,
             Sale: '',
             newProduct: '',
             img_src: './img/cards/pic4.jpg',
@@ -45,6 +50,7 @@ document.addEventListener("DOMContentLoaded", function() {
         },
     
         {   
+            link: pathSingle,
             Sale: 'product-sale',
             newProduct: '',
             img_src: './img/cards/pic5.jpg',
@@ -56,6 +62,7 @@ document.addEventListener("DOMContentLoaded", function() {
         },
     
         {   
+            link: pathSingle,
             newProduct: '',
             Sale: '',
             img_src: './img/cards/pic6.jpg',
@@ -67,6 +74,7 @@ document.addEventListener("DOMContentLoaded", function() {
         },
     
         {   
+            link: pathSingle,
             Sale: '',
             newProduct: 'new-product',
             img_src: './img/cards/pic7.jpg',
@@ -78,6 +86,7 @@ document.addEventListener("DOMContentLoaded", function() {
         },
     
         {   
+            link: pathSingle,
             Sale: 'product-sale',
             newProduct: '',
             img_src: './img/cards/pic8.jpg',
@@ -89,6 +98,7 @@ document.addEventListener("DOMContentLoaded", function() {
         },
     
         {   
+            link: pathSingle,
             Sale: '',
             newProduct: 'new-product',
             img_src: './img/cards/pic9.jpg',
@@ -100,6 +110,7 @@ document.addEventListener("DOMContentLoaded", function() {
         },
 
         {   
+            link: pathSingle,
             Sale: '',
             newProduct: 'new-product',
             img_src: './img/cards/pic1.jpg',
@@ -111,6 +122,7 @@ document.addEventListener("DOMContentLoaded", function() {
         },
     
         {   
+            link: pathSingle,
             Sale: '',
             newProduct: '',
             img_src: './img/cards/pic2.jpg',
@@ -122,6 +134,7 @@ document.addEventListener("DOMContentLoaded", function() {
         },
     
         {   
+            link: pathSingle,
             Sale: '',
             newProduct: 'new-product',
             img_src: './img/cards/pic3.jpg',
@@ -133,6 +146,7 @@ document.addEventListener("DOMContentLoaded", function() {
         },
 
         {   
+            link: pathSingle,
             Sale: '',
             newProduct: 'new-product',
             img_src: './img/cards/pic6.jpg',
@@ -144,6 +158,7 @@ document.addEventListener("DOMContentLoaded", function() {
         },
     
         {   
+            link: pathSingle,
             Sale: '',
             newProduct: 'new-product',
             img_src: './img/cards/pic4.jpg',
@@ -155,6 +170,7 @@ document.addEventListener("DOMContentLoaded", function() {
         },
     
         {   
+            link: pathSingle,
             Sale: '',
             newProduct: 'new-product',
             img_src: './img/cards/pic6.jpg',
@@ -172,11 +188,13 @@ document.addEventListener("DOMContentLoaded", function() {
                 <article class="card-item__wrapper">
                     <span class="${category.newProduct}${category.Sale}"></span>
 
-                    <picture>
-                        <source srcset="${category.webp_src}" type="image/webp" title="Product image">
-                        <img src="${category.img_src}" alt="${category.img_alt}" class="card-item__img" title="Product image">
-                    </picture>
-    
+                    <a href="${category.link}">
+                        <picture>
+                            <source srcset="${category.webp_src}" type="image/webp" title="Product image">
+                            <img src="${category.img_src}" alt="${category.img_alt}" class="card-item__img" title="Product image">
+                        </picture>
+                    </a>
+
                     <h3 class="card-item__title" title="Product Name">${category.title}</h3>
                     
                     <s class="card-item__price-old" title="Old price" aria-label="Old price">${category.old_price}</s>
@@ -185,7 +203,7 @@ document.addEventListener("DOMContentLoaded", function() {
     
                     <button class="card-item__purchase" title="Add to Cart" aria-label="Add to Cart"></button>
                 </article>
-            </li> `
+            </li>`
     }
     
 

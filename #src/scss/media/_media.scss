@@ -140,6 +140,10 @@
     .same-products__item {
         margin-right: 54px;
     }
+
+    .products-container {
+        max-width: 100%;
+    }
 }
 
 @media only screen and (max-width: 576px) {
@@ -272,10 +276,10 @@
 
    .nav-info__item {
         margin-right: 15px;
-   }
-
-   .nav-info__item:after {
-        margin-left: 4px;
+        &:after {
+            margin-left: 4px;
+            right: -10px;
+        }
    }
 
     .same-products__item {
