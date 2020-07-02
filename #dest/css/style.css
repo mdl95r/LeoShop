@@ -2098,11 +2098,6 @@
   .products-block {
     margin-bottom: 20px;
   }
-  .list-items {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
   .h2-title {
     text-align: center;
   }
@@ -2125,6 +2120,11 @@
 }
 
 @media only screen and (max-width: 425px) {
+  .list-items {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
   .nav-info__link {
     font-size: 12px;
   }

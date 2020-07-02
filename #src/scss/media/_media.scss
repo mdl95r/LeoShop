@@ -237,10 +237,6 @@
         margin-bottom: 20px;
     }
 
-    .list-items {
-        justify-content: center;
-    }
-
     .h2-title {
         text-align: center;
     }
@@ -270,6 +266,10 @@
 }
 
 @media only screen and (max-width: 425px) {
+    .list-items {
+        justify-content: center;
+    }
+    
    .nav-info__link {
         font-size: 12px;
    }
