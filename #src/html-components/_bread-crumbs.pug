@@ -1,0 +1,9 @@
+mixin breadcrumbs(prevPage, currentPage)
+    .breadcrumbs-wrapper
+        ul.breadcrumbs-wrapper__list
+            li.breadcrumbs-wrapper__item
+                a.breadcrumbs-wrapper__link(href='/') Home
+            li.breadcrumbs-wrapper__item
+                a.breadcrumbs-wrapper__link(href='#')= prevPage
+            li.breadcrumbs-wrapper__item
+                a.breadcrumbs-wrapper__link.active(href='#')= currentPage

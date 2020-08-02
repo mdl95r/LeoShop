@@ -11,6 +11,7 @@
     align-items: center;
     &__label {
         font-weight: normal;
+        margin-right: 5px;
     }
 
     .pages-select {
@@ -27,6 +28,12 @@
             &:hover {
                 text-decoration: underline;
             }
+        }
+    }
+
+    .show-select {
+        &__text {
+            margin-left: 5px;
         }
     }
 }

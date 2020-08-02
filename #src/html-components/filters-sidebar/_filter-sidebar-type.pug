@@ -1,0 +1,10 @@
+- const frames = ['Full Rim','Rim Less','Half Rim']
+
+article.filter-sidebar__type.filter-item
+    h3.type__title.filter-title Frame type
+    button.filter-btn.active
+    ul.type-list.filter-list
+        each frame, id in frames
+            li.type-list__item.list-item
+                input(type="checkbox" id=`type-list-${id + 1}` class="type-list__input")
+                label(for=`type-list-${id + 1}` class="type-list__label filter-label")= frame

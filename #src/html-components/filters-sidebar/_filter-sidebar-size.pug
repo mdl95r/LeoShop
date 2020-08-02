@@ -1,0 +1,10 @@
+- const sizes = ['Small','Medium','Large', 'Ultra Large']
+
+article.filter-sidebar__size.filter-item
+    h3.size__title.filter-title Frame size
+    button.filter-btn
+    ul.size-list.filter-list
+        each size, id in sizes
+            li.size-list__item.list-item
+                input(type="checkbox" id=`size-list-${id + 1}` class="size-list__input")
+                label(for=`size-list-${id + 1}` class="size-list__label filter-label")= size

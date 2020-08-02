@@ -1,46 +1,47 @@
-const project_folder = "#dest";
+const project_folder = "dest";
 const source_folder = "#src";
 const components = "components";
 
 const path = {
   build: {
-    html: project_folder+"/",
-    css: project_folder+"/css/",
-    js: project_folder+"/js/",
-    img: project_folder+"/img/",
-    fonts: project_folder+"/fonts/",
+    html: project_folder + "/",
+    css: project_folder + "/css/",
+    js: project_folder + "/js/",
+    img: project_folder + "/img/",
+    fonts: project_folder + "/fonts/",
   },
 
   src: {
-    html: [source_folder+"/*.html", "!"+source_folder +  "/_*.html"],
-    pug: source_folder+"/index.pug",
-    css: source_folder+"/scss/style.scss",
-    js: [source_folder+"/js/*.js", "!" + source_folder + "/" + components + "/_*.js"],
+    html: [source_folder + "/*.html", "!" + source_folder + "/_*.html"],
+    pug: source_folder + "/*.pug",
+    css: source_folder + "/scss/*.scss",
+    js: [source_folder + "/js/*.js", "!" + source_folder + "/" + components + "/_*.js"],
     img: source_folder + "/img/**/*.{jpg,jpeg,png,svg,webp}",
-    fonts: source_folder+"fonts/",
+    fonts: source_folder + "/fonts/*.{woff,woff2,ttf,svg}",
   },
 
   watch: {
     html: source_folder + "/**/*.html",
-    // pug: source_folder+"/index.pug",
+    pug: source_folder + "/**/*.pug",
     css: source_folder + "/scss/**/*.scss",
     js: source_folder + "/js/**/*.js",
-    img: source_folder+"/img",
+    img: source_folder + "/img",
   },
 
   clean: "./" + project_folder + "/"
 }
 
-const {src, dest} = require('gulp'),
-      gulp = require('gulp'),
-      fileinclude = require('gulp-file-include'),
-      scss = require('gulp-sass'),
-      autoprefixer = require('gulp-autoprefixer'),
-      imgmin = require('gulp-imagemin'),
-      webp = require('gulp-webp'),
-      lazyScr = require('gulp-lazysizes-srcset');
-      webphtml = require('gulp-webp-html'),
-      browsersync = require("browser-sync").create();
+const { src, dest } = require('gulp'),
+  gulp = require('gulp'),
+  fileinclude = require('gulp-file-include'),
+  scss = require('gulp-sass'),
+  autoprefixer = require('gulp-autoprefixer'),
+  gulpPug = require('gulp-pug'),
+  imgmin = require('gulp-imagemin'),
+  webp = require('gulp-webp'),
+  lazyScr = require('gulp-lazysizes-srcset');
+webphtml = require('gulp-webp-html'),
+  browsersync = require("browser-sync").create();
 
 function browserSync() {
   browsersync.init({
@@ -57,15 +58,14 @@ function browserSync() {
 function html() {
   return src(path.src.html)
     .pipe(fileinclude())
+    .pipe(dest(path.build.html))
+    .pipe(browsersync.stream())
+}
+
+function pug() {
+  return src(path.src.pug)
+    .pipe(gulpPug({ pretty: false }))
     .pipe(webphtml())
-    .pipe(
-      lazyScr({
-        decodeEntities: false,
-        data_src: 'data-src',
-        data_srcset: 'data-srcset',
-        suffix: {'320w': '@320w', '640w': '@640w', '960w': '@960w'}
-      })
-    )
     .pipe(dest(path.build.html))
     .pipe(browsersync.stream())
 }
@@ -81,7 +81,7 @@ function images() {
   return src(path.src.img)
     .pipe(
       webp({
-          quality: 70
+        quality: 70
       })
     )
     .pipe(dest(path.build.img))
@@ -113,24 +113,26 @@ function css() {
     )
 
     .pipe(dest(path.build.css))
-    
+
     .pipe(browsersync.stream())
 }
 
 function watchFiles() {
   gulp.watch([path.watch.html], html);
+  gulp.watch([path.watch.pug], pug);
   gulp.watch([path.watch.css], css);
   gulp.watch([path.watch.img], images);
   gulp.watch([path.watch.js], js);
 }
 
-const build = gulp.series(gulp.parallel(js, css, html, images));
+const build = gulp.series(gulp.parallel(js, css, html, pug, images));
 const watch = gulp.parallel(build, watchFiles, browserSync);
 
 exports.js = js;
 exports.images = images;
 exports.css = css;
 exports.html = html;
+exports.pug = pug;
 exports.build = build;
 exports.watch = watch;
 exports.default = watch;

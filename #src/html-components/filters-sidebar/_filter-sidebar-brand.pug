@@ -1,0 +1,10 @@
+- const brands = ['John Jacobs', 'Tag Heuer', 'Lee Cooper', 'S Oliver', 'Hackett', 'Killer', 'IDEE', 'Vogue', 'Gunnar','Accu Reader', 'CAT', 'Excellent', 'Feelgood', 'Odyssey' ,'Animal']
+
+article.filter-sidebar__brand.filter-item
+    h3.brand__title.filter-title Brand name
+    button.filter-btn
+    ul.brand-list.filter-list.scrolling
+        each brand, id in brands
+            li.brand-list__item.list-item
+                input(type="checkbox" id=`brand-list-${id + 1}` class="brand-list__input")
+                label(for=`brand-list-${id + 1}` class="brand-list__label filter-label")= brand

@@ -1,0 +1,16 @@
+- const products = ['Rs 550' , 'Rs 750', 'Rs 600', 'Rs 850', 'Rs 900', 'Rs 550', 'Rs 750', 'Rs 850' , 'Rs 600']
+
+h2.same-products__title 10 other products in the same category
+.same-products-wrapper
+    ul.same-products__list
+        each product, id in products
+            li.same-products__item
+                figure
+                    img.same-products__img(src=`${'img/same-product/s' + `${id + 1}` + '.jpg'}`, alt=`same-product-${id + 1}`)
+                    figcaption.same-products-figcaption
+                        a.same-products-figcaption__link(href='#') Category
+                        p.same-products-figcaption__text= product
+.same-products-slider
+    button.same-products-slider__btn-prev
+    button.same-products-slider__btn-next
+

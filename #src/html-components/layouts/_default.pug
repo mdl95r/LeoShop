@@ -1,0 +1,25 @@
+block vars
+    - isOtherPage = false
+
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(name="robots" content="noindex")
+        link(rel="stylesheet", href="css/normalize.css")
+        link(rel="stylesheet", href="css/style.css")
+        block seo
+            meta(name="description", content= pageDesc)
+            title= pageTitle
+    body
+        include ../_header.pug
+        block content
+        include ../_footer.pug
+    block scripts
+        script(src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js")
+        script(src="./js/script.js")
+        if isOtherPage
+            script(src="./js/other.js")
+        else
+            script(src="./js/card.js")

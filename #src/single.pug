@@ -1,0 +1,26 @@
+extends html-components/layouts/_default.pug
+include html-components/_bread-crumbs.pug
+
+block vars
+    - let pageTitle = 'LEO Shop. Single page'
+    - let pageDesc = 'LEO Shop. Best shop in the world, single page'
+
+block seo
+    meta(name="description", content= pageDesc)
+    title= pageTitle
+block content
+    main.main-container
+        .container
+            +breadcrumbs('lorem ipsum', 'Dolor sit amet')
+        .container.flex
+            .content-container
+                section.main-description
+                    include html-components/single-page/_card-description-main.pug
+                section.same-products
+                    include html-components/single-page/_same-10-products.pug
+                .other-description
+                    include html-components/single-page/_other-description.pug
+            include html-components/filters-sidebar/_filters-sidebar-main.pug
+block scripts
+    script(src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js")
+    script(src="./js/script.js")

@@ -1,0 +1,10 @@
+- const prices = ['Rs 500 - Rs 700','Rs 700 - Rs 1000','Rs 1000 - Rs 1500','Rs 1500 - Rs 2000','Rs 2000 - Rs 2500','Rs 2500 - Rs 3000','Rs 3500 - Rs 4000','Rs 4000 - Rs 4500','Rs 4500 - Rs 5000','Rs 5000 - Rs 5500','Rs 5500 - Rs 6000','Rs 6000 - Rs 6500','Rs 6500 - Rs 7000','Rs 7000 - Rs 7500','Rs 7500 - Rs 8000','Rs 8000 - Rs 8500']
+
+article.filter-sidebar__prices.filter-item
+    h3.prices__title.filter-title Price
+    button.filter-btn.active
+    ul.prices-list.filter-list.scrolling
+        each price, id in prices
+                li.prices-list__item.list-item
+                    input(type="checkbox" id=`prices-list-${id + 1}` class="prices-list__checkbox")
+                    label(for=`prices-list-${id + 1}` class="prices-list__label filter-label")= price

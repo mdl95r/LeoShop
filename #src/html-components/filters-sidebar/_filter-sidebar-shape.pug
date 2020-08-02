@@ -1,0 +1,10 @@
+- const shapes = ['Pilot','Rectangle','Square','Round','Others','Cat Eyes','Wrap Around']
+
+article.filter-sidebar__shape.filter-item
+    h3.shape__title.filter-title Frame shape
+    button.filter-btn
+    ul.shape-list.filter-list.scrolling
+        each shape, id in shapes
+                li.shape-list__item.list-item
+                    input(type="checkbox" id=`shape-list-${id + 1}` class="shape-list__input")
+                    label(for=`shape-list-${id + 1}` class="shape-list__label filter-label")= shape

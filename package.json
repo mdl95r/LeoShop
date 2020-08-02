@@ -4,6 +4,7 @@
   "description": "магазин leoshop",
   "main": "index.html",
   "scripts": {
+    "start": "gulp",
     "build": "babel #dest/js -d final-js --presets es2015"
   },
   "author": "mdl",

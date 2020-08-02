@@ -1,0 +1,21 @@
+.sort-bar
+    .select-by
+        label.sort-bar__label(for='select-by') Sort By:
+        select#select-by(name='select-by')
+            option(value='Position') Position
+            option(value='Name') Name
+            option(value='Price') Price
+    .pages-select
+        span.pages-select__title Pages:
+        ul.pages-select-list
+            li
+                a.pages-select__item(href='#') 1
+            li
+                a.pages-select__item(href='#') 2
+    .show-select
+        label.sort-bar__label(for='show') Show:
+        select#show(name='show')
+            option(value='Position') 9
+            option(value='Name') 15
+            option(value='Price') 30
+        span.show-select__text per page
