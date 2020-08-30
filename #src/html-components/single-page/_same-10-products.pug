@@ -1,15 +1,61 @@
-- const products = ['Rs 550' , 'Rs 750', 'Rs 600', 'Rs 850', 'Rs 900', 'Rs 550', 'Rs 750', 'Rs 850' , 'Rs 600']
-
+-
+    const products = [
+        {
+            img: 'img/same-product/s1.jpg',
+            alt: 'same-product-1',
+            text: 'Rs 550',
+        },
+        {
+            img: 'img/same-product/s2.jpg',
+            alt: 'same-product-2',
+            text: 'Rs 750',
+        },
+        {
+            img: 'img/same-product/s3.jpg',
+            alt: 'same-product-3',
+            text: 'Rs 600',
+        },
+        {
+            img: 'img/same-product/s4.jpg',
+            alt: 'same-product-4',
+            text: 'Rs 850',
+        },
+        {
+            img: 'img/same-product/s5.jpg',
+            alt: 'same-product-5',
+            text: 'Rs 900',
+        },
+        {
+            img: 'img/same-product/s1.jpg',
+            alt: 'same-product-6',
+            text: 'Rs 550',
+        },
+        {
+            img: 'img/same-product/s2.jpg',
+            alt: 'same-product-7',
+            text: 'Rs 750',
+        },
+        {
+            img: 'img/same-product/s3.jpg',
+            alt: 'same-product-8',
+            text: 'Rs 850',
+        },
+        {
+            img: 'img/same-product/s4.jpg',
+            alt: 'same-product-9',
+            text: 'Rs 600',
+        },
+    ];
 h2.same-products__title 10 other products in the same category
 .same-products-wrapper
     ul.same-products__list
-        each product, id in products
+        each product in products
             li.same-products__item
                 figure
-                    img.same-products__img(src=`${'img/same-product/s' + `${id + 1}` + '.jpg'}`, alt=`same-product-${id + 1}`)
+                    img.same-products__img(src=`${product.img}`, alt=`${product.alt}`)
                     figcaption.same-products-figcaption
                         a.same-products-figcaption__link(href='#') Category
-                        p.same-products-figcaption__text= product
+                        p.same-products-figcaption__text #{product.text}
 .same-products-slider
     button.same-products-slider__btn-prev
     button.same-products-slider__btn-next

@@ -3,7 +3,6 @@ extends html-components/layouts/_default.pug
 block vars
     - let pageTitle = 'LEO Shop. Other goods'
     - let pageDesc = 'LEO Shop. Best shop in the world, other page'
-    - isOtherPage = true
 
 block seo
     meta(name="description", content= pageDesc)
@@ -16,5 +15,6 @@ block content
                     h2.products-block__title.h2-title Others
                     include html-components/_sort-bar.pug
                     ul.products-block__list.list-items
+                        +cards(cards)
             include html-components/filters-sidebar/_filters-sidebar-main.pug
             

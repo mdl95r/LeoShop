@@ -5,7 +5,7 @@
   "main": "index.html",
   "scripts": {
     "start": "gulp",
-    "build": "babel #dest/js -d final-js --presets es2015"
+    "build": "babel dest/js -d dest/js/babel --presets es2015"
   },
   "author": "mdl",
   "license": "ISC",

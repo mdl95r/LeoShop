@@ -1,0 +1,164 @@
+- const pathSingle = 'single.html'
+-
+    const cards = [
+        {
+            link: pathSingle,
+            Sale: '',
+            newProduct: 'new-product',
+            img_src: './img/cards/pic1',
+            title: 'Lorem Ipsum is simply.',
+            old_price: '',
+            price: '$304,00',
+        },
+        {
+            link: pathSingle,
+            Sale: '',
+            newProduct: '',
+            img_src: './img/cards/pic2',
+            title: ' Nullam vestibulum.',
+            old_price: '',
+            price: '$70,00',
+        },
+        {
+            link: pathSingle,
+            Sale: 'product-sale',
+            newProduct: '',
+            img_src: './img/cards/pic3',
+            title: 'Donec et lorem suscipit.',
+            old_price: '$460',
+            price: '$300,00',
+        },
+        {
+            link: pathSingle,
+            Sale: '',
+            newProduct: '',
+            img_src: './img/cards/pic4',
+            title: 'Curabitur pretium dui.',
+            old_price: '',
+            price: '$300,00',
+        },
+        {
+            link: pathSingle,
+            Sale: 'product-sale',
+            newProduct: '',
+            img_src: './img/cards/pic5',
+            title: 'Lorem Ipsum is simply.',
+            old_price: '$342',
+            price: '$278,00',
+        },
+        {
+            link: pathSingle,
+            newProduct: '',
+            Sale: '',
+            img_src: './img/cards/pic6',
+            title: ' Sed tempus tellus.',
+            old_price: '',
+            price: '$212,00',
+        },
+        {
+            link: pathSingle,
+            Sale: '',
+            newProduct: 'new-product',
+            img_src: './img/cards/pic7',
+            title: 'Lorem Ipsum is simply.',
+            old_price: '',
+            price: '$350,00',
+        },
+        {
+            link: pathSingle,
+            Sale: 'product-sale',
+            newProduct: '',
+            img_src: './img/cards/pic8',
+            title: 'Etiam egestas velit.',
+            old_price: '$340',
+            price: '$200,00',
+        },
+        {
+            link: pathSingle,
+            Sale: '',
+            newProduct: 'new-product',
+            img_src: './img/cards/pic9',
+            title: 'Mauris viverra magna.',
+            old_price: '',
+            price: '$323,00',
+        },
+    ];
+
+    const cards2 = [
+       {
+            link: pathSingle,
+            Sale: '',
+            newProduct: 'new-product',
+            img_src: './img/cards/pic1',
+            title: 'Nulla accumsan lect.',
+            old_price: '',
+            price: '$60.00',
+        },
+        {
+            link: pathSingle,
+            Sale: '',
+            newProduct: '',
+            img_src: './img/cards/pic2',
+            title: ' Nullam vestibulum.',
+            old_price: '',
+            price: '$278,00',
+        },
+        {
+            link: pathSingle,
+            Sale: '',
+            newProduct: 'new-product',
+            img_src: './img/cards/pic3',
+            title: 'Donec et lorem suscipit.',
+            old_price: '',
+            price: '$188,00',
+        },
+    ];
+
+    const cards3 = [
+        {
+            link: pathSingle,
+            Sale: '',
+            newProduct: 'new-product',
+            img_src: './img/cards/pic6',
+            title: 'Curabitur pretium dui.',
+            old_price: '',
+            price: '$188.00',
+        },
+
+        {
+            link: pathSingle,
+            Sale: '',
+            newProduct: 'new-product',
+            img_src: './img/cards/pic4',
+            title: 'Sed tempus tellus.',
+            old_price: '',
+            price: '$90.00',
+        },
+
+        {
+            link: pathSingle,
+            Sale: '',
+            newProduct: 'new-product',
+            img_src: './img/cards/pic6',
+            title: 'Nulla accumsan lect.',
+            old_price: '',
+            price: '$60.00',
+        },
+    ];
+mixin cards(card)
+    each item in card
+        li.cards-item
+            article.card-item__wrapper
+                span(class=`${item.newProduct}${item.Sale}`)
+
+                a(href=`${item.link}`)
+                    picture
+                        source(srcset=`${item.img_src}.webp` type="image/webp" title="Product image")
+                        img(src=`${item.img_src}.jpg` alt=`${item.title}` class="card-item__img" title="Product image")
+                h3.card-item__title(title="Product Name") #{item.title}
+                
+                s.card-item__price-old(title="Old price" aria-label="Old price") #{item.old_price}
+
+                span.card-item__price(title="Price" aria-label="Price") #{item.price}
+
+                button.card-item__purchase(title="Add to Cart" aria-label="Add to Cart")

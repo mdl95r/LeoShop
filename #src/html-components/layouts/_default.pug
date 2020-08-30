@@ -1,5 +1,4 @@
 block vars
-    - isOtherPage = false
 
 <!DOCTYPE html>
 html(lang="en")
@@ -13,13 +12,10 @@ html(lang="en")
             meta(name="description", content= pageDesc)
             title= pageTitle
     body
+        include ../_data.pug
         include ../_header.pug
         block content
         include ../_footer.pug
     block scripts
         script(src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js")
         script(src="./js/script.js")
-        if isOtherPage
-            script(src="./js/other.js")
-        else
-            script(src="./js/card.js")

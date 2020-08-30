@@ -2,15 +2,21 @@ aside.side-bar.right
     article.sidebar-banner.aside-items
         h2.sidebar-banner__title.h2-title Featured Glass
         ul.sidebar-banner__list
-            li#slide_1.sidebar-banner__item.active
-                img.sidebar-banner__img(src='./img/aside/t-img1.jpg', alt='banner-1')
+            li#slide_1.sidebar-banner__item.sidebar-banner__item--active
+                picture
+                    source(srcset="./img/aside/t-img1.webp" type="image/webp")
+                    img.sidebar-banner__img(src='./img/aside/t-img1.jpg', alt='banner-1')
             li#slide_2.sidebar-banner__item
-                img.sidebar-banner__img(src='./img/aside/t-img2.jpg', alt='banner-2')
+                picture
+                    source(srcset="./img/aside/t-img2.webp" type="image/webp")
+                    img.sidebar-banner__img(src='./img/aside/t-img2.jpg', alt='banner-2')
             li#slide_3.sidebar-banner__item
-                img.sidebar-banner__img(src='./img/aside/t-img3.jpg', alt='banner-2')
+                picture
+                    source(srcset="./img/aside/t-img3.webp" type="image/webp")
+                    img.sidebar-banner__img(src='./img/aside/t-img3.jpg', alt='banner-2')
         a.sidebar-banner__btn(href='#', title='Check it out') Check it out
         ol.banner-swipe__list
-            li.banner-swipe__item.active
+            li.banner-swipe__item.banner-swipe__item--active
                 button.banner-swipe__btn
             li.banner-swipe__item
                 button.banner-swipe__btn

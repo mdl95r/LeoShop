@@ -11,46 +11,46 @@
     display: none;
     opacity: 0.4;
     //.banner-item__img:;
-   &__img {
+    &__img {
         position: absolute;
         top: 0;
         left: 0;
         z-index: -1;
     }
-}
 
-.banner-item.active {
-    display: block;
-    opacity: 1;
+    &--active {
+        display: block;
+        opacity: 1;
+    }
 }
 
 .banner-content {
     padding: 12% 24% 0 18%;
     color: #fff;
     text-transform: uppercase;
-        &__title {
-            display: inline-block;
-            padding: 5px 20px;
-            font-size: 2em;
-            background: rgba(91, 89, 82, 0.4);
-        }
-        
-        // .banner-item__desc
-        
-        &__desc {
-            display: inline-block;
-            padding: 5px 20px;
-            font-size: 2em;
-            background: rgba(91, 89, 82, 0.4);
-        }
+    &__title {
+        display: inline-block;
+        padding: 5px 20px;
+        font-size: 2em;
+        background: rgba(91, 89, 82, 0.4);
+    }
+    
+    // .banner-item__desc
+    
+    &__desc {
+        display: inline-block;
+        padding: 5px 20px;
+        font-size: 2em;
+        background: rgba(91, 89, 82, 0.4);
+    }
 
-        &__wrapper {
-            margin-bottom: 10px;
-        }
+    &__wrapper {
+        margin-bottom: 10px;
+    }
 
-        &__wrapper:last-child {
-            margin-bottom: 0;
-        }
+    &__wrapper:last-child {
+        margin-bottom: 0;
+    }
 }
 
 .control-btn-prev {

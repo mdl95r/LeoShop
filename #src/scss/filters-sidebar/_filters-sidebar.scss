@@ -1,105 +1,106 @@
-@import "../variables.scss";
 @import "_filter-sidebar-categories.scss";
 @import "_filter-sidebar-color.scss";
 @import "../components/main.scss";
 
 .filter-sidebar {
     margin-bottom: 20px;
+}
 
-    .filter-title {
-        text-transform: uppercase;
-        font-weight: normal;
-        font-size: 16px;
-        border: 1px solid #E6E6E6;
-        padding: 5px;
-        background: #F7F7F7;
-        margin-bottom: 10px;
-        cursor: pointer;
+.filter-title {
+    text-transform: uppercase;
+    font-weight: normal;
+    font-size: 16px;
+    border: 1px solid #E6E6E6;
+    padding: 5px;
+    background: #F7F7F7;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.filter-item {
+    margin-bottom: 20px;
+    position: relative;
+
+    &:last-child {
+        margin-bottom: 0;
     }
+}
 
-    .filter-item {
-        margin-bottom: 20px;
-        position: relative;
-        .filter-list {
-            padding: 0 5px;
-            font-size: 13px;
-            .list-item {
-                margin-bottom: 10px;
-                &:last-child {
-                    margin-bottom: 0;
-                }
-            }
-        }
+.filter-list {
+    padding: 0 5px;
+    font-size: 13px;
+}
 
-        &:last-child {
-            margin-bottom: 0;
-        }
+.list-item {
+    margin-bottom: 10px;
+    &:last-child {
+        margin-bottom: 0;
     }
+}
 
-    .filter-btn {
+.filter-btn {
+    position: absolute;
+    top: 6px;
+    right: 4px;
+    width: 20px;
+    height: 20px;
+    &:after {
+        content: "";
         position: absolute;
-        top: 6px;
-        right: 4px;
-        width: 20px;
-        height: 20px;
+        top: 10px;
+        right: 9px;
+        width: 9px;
+        height: 3px;
+        background: gray;
+        @include trans-2s_ease(.2s);
+        @include transform(-45deg);
+    }
+
+    &:before {
+        content: "";
+        position: absolute;
+        top: 7px;
+        left: 10px;
+        width: 3px;
+        height: 9px;
+        background: gray;
+        @include trans-2s_ease(.2s);
+        @include transform(135deg);
+    }
+
+    &--active {
         &:after {
             content: "";
-            position: absolute;
-            top: 10px;
-            right: 9px;
-            width: 9px;
-            height: 3px;
-            background: gray;
             @include trans-2s_ease(.2s);
-            @include transform(-45deg);
+            @include transform(45deg);
         }
 
         &:before {
             content: "";
-            position: absolute;
             top: 7px;
-            left: 10px;
-            width: 3px;
-            height: 9px;
-            background: gray;
             @include trans-2s_ease(.2s);
-            @include transform(135deg);
-        }
-
-        &.active {
-            &:after {
-                content: "";
-                @include trans-2s_ease(.2s);
-                @include transform(45deg);
-            }
-    
-            &:before {
-                content: "";
-                top: 7px;
-                @include trans-2s_ease(.2s);
-                @include transform(-135deg);
-            }
+            @include transform(-135deg);
         }
     }
+}
 
-    .prices-list {
-        height: 170px;
-    }
+.prices-list {
+    height: 170px;
+}
 
-    .brand-list {
-        height: 150px;
-    }
+.brand-list {
+    height: 150px;
+}
 
-    .shape-list {
-        height: 140px;
-    }
+.shape-list {
+    height: 140px;
+}
 
-    .scrolling {
-        overflow-y: scroll;
-    }
+.scrolling {
+    overflow-y: scroll;
+}
 
-    .filter-label {
-        cursor: pointer;
-        margin-left: 5px;
-    }
+.filter-label {
+    cursor: pointer;
+    margin-left: 5px;
 }

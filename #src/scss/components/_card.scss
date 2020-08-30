@@ -30,69 +30,68 @@
     margin-right: 0;
 }
 .card-item {
+    // .card-item__wrapper
 
-		// .card-item__wrapper
+    &__wrapper {
+        position: relative;
+    }
 
-		&__wrapper {
-            position: relative;
-		}
+    // .card-item__img
 
-		// .card-item__img
+    &__img {
+        width: 220px;
+        border: 1px solid #c2c2c2;
+        margin-bottom: 10px;
+    }
 
-		&__img {
-            width: 220px;
-            border: 1px solid #c2c2c2;
-            margin-bottom: 10px;
-		}
+    // .card-item__title
 
-		// .card-item__title
+    &__title {
+        font-size: $h3-card;
+        font-weight: normal;
+        margin-bottom: 10px;
+    }
 
-		&__title {
-            font-size: $h3-card;
-            font-weight: normal;
-            margin-bottom: 10px;
-		}
+    // .card-item__price-old
 
-		// .card-item__price-old
+    &__price-old {
+        font-size: 14px;
+    }
 
-		&__price-old {
-            font-size: 14px;
-		}
+    // .card-item__price
 
-		// .card-item__price
+    &__price {
+        color: $green;
+        font-size: 15px;
+    }
 
-		&__price {
-            color: $green;
-            font-size: 15px;
-		}
+    // .card-item__purchase
 
-		// .card-item__purchase
+    &__purchase {
+        position: absolute;
+        right: 0;
+        bottom: 10px;
+        background: $green-btn;
+        width: 35px;
+        height: 35px;
+        outline-color: beige;
+        border-radius: 100%;
+        -webkit-border-radius: 100%;
+        -moz-border-radius: 100%;
+        -ms-border-radius: 100%;
+        -o-border-radius: 100%;
 
-		&__purchase {
+        &:after {
+            content: '';
+            background: url(../img/cards/shopping-action-basket-shop-buy-add.svg);
+            background-position: left;
+            background-size: cover;
             position: absolute;
-            right: 0;
-            bottom: 10px;
-            background: $green-btn;
-            width: 35px;
-            height: 35px;
-            outline-color: beige;
-            border-radius: 100%;
-            -webkit-border-radius: 100%;
-            -moz-border-radius: 100%;
-            -ms-border-radius: 100%;
-            -o-border-radius: 100%;
-
-            &:after {
-                content: '';
-                background: url(../img/cards/shopping-action-basket-shop-buy-add.svg);
-                background-position: left;
-                background-size: cover;
-                position: absolute;
-                top: 17%;
-                left: 18%;
-                width: 25px;
-                height: 25px;
-            }
+            top: 17%;
+            left: 18%;
+            width: 25px;
+            height: 25px;
+        }
     }
 }
 

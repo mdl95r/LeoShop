@@ -1,3 +1,5 @@
+- const collage = ['face1','face2', 'face3', 'face4', 'face5', 'face6', 'face7', 'face8'];
+
 footer.footer
     .container
         .footer-topbar
@@ -19,22 +21,8 @@ footer.footer
                 button.facebook-block__icon
                 .facebook-collage-wrapper
                     .facebook-collage
-                        img(src='./img/footer/collage/face1.jpeg' alt='face-1')
-                        
-                        img(src='./img/footer/collage/face2.jpeg' alt='face-2')
-                        
-                        img(src='./img/footer/collage/face3.jpeg' alt='face-3')
-                        
-                        img(src='./img/footer/collage/face4.jpeg' alt='face-4')
-                        
-                        img(src='./img/footer/collage/face5.jpeg' alt='face-5')
-                        
-                        img(src='./img/footer/collage/face6.jpeg' alt='face-6')
-                        
-                        img(src='./img/footer/collage/face7.jpeg' alt='face-7')
-                        
-                        img(src='./img/footer/collage/face8.jpeg' alt='face-8')
-                        
+                        each img, index in collage
+                            img(src=`./img/footer/collage/${img}.jpeg`, alt=`face-${index + 1}`)
                 a.facebook-block__desc(href='#') Facebook Social plugin
             section.twitter-block
                 h3.twitter-block__title.footer-title From twitter

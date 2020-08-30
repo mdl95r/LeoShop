@@ -15,14 +15,14 @@ header.header
                         span Language:
                         button.lang-select__btn.js-lang-select-btn(type='button' aria-label='Current language') English
                         ul.languages-list.js-languages-list
-                            li.languages-list__item.active English
+                            li.languages-list__item.languages-list__item--active English
                             li.languages-list__item French
                             li.languages-list__item German
                     .currency-select.js-currency-select
                         span Currency:
                         button.currency-select__btn.js-currency-select-btn(type='button' aria-label='Current currency') USD
                         ul.currency-list.js-currency-list
-                            li.currency-list__item.active USD
+                            li.currency-list__item.currency-list__item--active USD
                             li.currency-list__item EUR
                             li.currency-list__item GBP
                 nav.nav-info
@@ -37,11 +37,11 @@ header.header
             h1.main-bar__logo Leo Shop
             nav.nav-menu
                 ul.nav-menu__list
-                    +valeusMenu('Home', '/')
+                    +valeusMenu('Home', 'index.html')
                     +valeusMenu('Women', '#')
                     +valeusMenu('Men', '#')
-                    +valeusMenu('Other', '/other.html')
-                    +valeusMenu('Purchase', '/single.html')
+                    +valeusMenu('Other', 'other.html')
+                    +valeusMenu('Purchase', 'single.html')
             form.form-main(action='#')
                 input.form-main__input(type='search' placeholder='search...')
                 button.form-main__btn(title='Find' type='button' aria-label='Find')

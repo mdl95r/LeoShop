@@ -1,64 +1,60 @@
-.filter-sidebar__color {
-    .color-list {
-        .color-item {
-            display: flex;
-            align-items: center;
-            &__btn {
-                width: 25px;
-                height: 25px;
-                border: none;
-                margin-right: 10px;
-                cursor: pointer;
-            }
+.color-item {
+    display: flex;
+    align-items: center;
+    &__btn {
+        width: 25px;
+        height: 25px;
+        border: none;
+        margin-right: 10px;
+        cursor: pointer;
+    }
 
-            &__label {
-                cursor: pointer;
-                &:hover {
-                    @include hover;
-                }
-            }
+    &__label {
+        cursor: pointer;
+        &:hover {
+            @include hover;
+        }
+    }
 
-            &:nth-child(1) {
-                .color-item__btn {
-                    background: red;
-                }
-            }
+    &:nth-child(1) {
+        .color-item__btn {
+            background: red;
+        }
+    }
 
-            &:nth-child(2) {
-                .color-item__btn {
-                    background: green;
-                }
-            }
-            
-            &:nth-child(3) {
-                .color-item__btn {
-                    background: blue;
-                }
-            }
+    &:nth-child(2) {
+        .color-item__btn {
+            background: green;
+        }
+    }
+    
+    &:nth-child(3) {
+        .color-item__btn {
+            background: blue;
+        }
+    }
 
-            &:nth-child(4) {
-                .color-item__btn {
-                    background: yellow;
-                }
-            }
+    &:nth-child(4) {
+        .color-item__btn {
+            background: yellow;
+        }
+    }
 
-            &:nth-child(5) {
-                .color-item__btn {
-                    background: violet;
-                }
-            }
+    &:nth-child(5) {
+        .color-item__btn {
+            background: violet;
+        }
+    }
 
-            &:nth-child(6) {
-                .color-item__btn {
-                    background: orange;
-                }
-            }
+    &:nth-child(6) {
+        .color-item__btn {
+            background: orange;
+        }
+    }
 
-            &:nth-child(7) {
-                .color-item__btn {
-                    background: gray;
-                }
-            }
+    &:nth-child(7) {
+        .color-item__btn {
+            background: gray;
         }
     }
 }

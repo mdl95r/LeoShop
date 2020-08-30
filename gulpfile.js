@@ -39,8 +39,7 @@ const { src, dest } = require('gulp'),
   gulpPug = require('gulp-pug'),
   imgmin = require('gulp-imagemin'),
   webp = require('gulp-webp'),
-  lazyScr = require('gulp-lazysizes-srcset');
-webphtml = require('gulp-webp-html'),
+  webphtml = require('gulp-webp-html'),
   browsersync = require("browser-sync").create();
 
 function browserSync() {

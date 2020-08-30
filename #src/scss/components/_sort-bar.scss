@@ -13,27 +13,27 @@
         font-weight: normal;
         margin-right: 5px;
     }
+}
 
-    .pages-select {
-        @include flx-sbn;
-        &-list {
-            display: flex;
-        }
-
-        &__title {
-            margin-right: 10px;
-        }
-        
-        &__item {
-            &:hover {
-                text-decoration: underline;
-            }
-        }
+.pages-select {
+    @include flx-sbn;
+    &-list {
+        display: flex;
     }
 
-    .show-select {
-        &__text {
-            margin-left: 5px;
+    &__title {
+        margin-right: 10px;
+    }
+    
+    &__item {
+        &:hover {
+            text-decoration: underline;
         }
+    }
+}
+
+.show-select {
+    &__text {
+        margin-left: 5px;
     }
 }

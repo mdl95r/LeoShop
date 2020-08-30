@@ -166,49 +166,48 @@
 
 .twitter-block {
     width: 230px;
+    &__desc {
+        position: relative;
+        margin-bottom: 10px;
+        line-height: 1.4;
+        display: block;
+        padding-left: 60px;
+        &:last-child {
+            margin-bottom: 0;
+        }
 
-		&__desc {
-            position: relative;
-            margin-bottom: 10px;
-            line-height: 1.4;
-            display: block;
-            padding-left: 60px;
-            &:last-child {
-                margin-bottom: 0;
-            }
+        &:after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: url(../img/footer/twitter.png) #fff;
+            width: 40px;
+            height: 40px;
+            border-radius: 100%;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
 
-            &:after {
-                content: "";
-                position: absolute;
-                top: 0;
-                left: 0;
-                background: url(../img/footer/twitter.png) #fff;
-                width: 40px;
-                height: 40px;
-                border-radius: 100%;
-                background-position: center;
-                background-repeat: no-repeat;
-            }
-
-            &:hover:after {
-                background: url(../img/footer/twitter.png) #ebebeb;
-                background-position: center;
-                background-repeat: no-repeat;
-                @include trans-2s_ease(.3s);
-            }
-		}
+        &:hover:after {
+            background: url(../img/footer/twitter.png) #ebebeb;
+            background-position: center;
+            background-repeat: no-repeat;
+            @include trans-2s_ease(.3s);
+        }
+    }
 }
 
 .info-nav {
-		&__item {
-            margin-bottom: 10px;
-		}
+    &__item {
+        margin-bottom: 10px;
+    }
 
-		&__link {
-            padding-left: 10px;
-            background: url('../img/footer/f-icon.png') no-repeat;
-            background-position: left;
-		}
+    &__link {
+        padding-left: 10px;
+        background: url('../img/footer/f-icon.png') no-repeat;
+        background-position: left;
+    }
 }
 
 .contacts-nav {
@@ -230,7 +229,6 @@
     &__list {
         display: flex;
     }
-
 
     &__item {
         margin-right: 10px;
@@ -284,7 +282,6 @@
 }
 
 .nav-footer {
-
     &__list {
         display: flex;
         flex-wrap: wrap;
